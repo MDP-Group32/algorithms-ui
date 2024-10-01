@@ -5,7 +5,7 @@ import { NavigationGrid } from '@/components/algorithm/NavigationGrid';
 import Scenarios from '@/components/scenarios/Scenarios';
 import Button from '@/components/ui/Button';
 import HealthIndicatorBadge from '@/components/ui/ServerStatus';
-import { ROBOT_INITIAL_POSITION, ALGO_GRID_BLOCK_SIZE_MULTIPLIER, GRID_ANIMATION_SPEED } from '@/constants';
+import { ROBOT_INITIAL_POSITION, GRID_ANIMATION_SPEED } from '@/constants';
 import { ScenarioEnum, ScenarioToObstaclesMap } from '@/scenarios';
 import { AlgorithmServerRequest, AlgorithmServerResponse } from '@/schemas/algorithm';
 import { Obstacle } from '@/schemas/obstacle';
@@ -50,8 +50,10 @@ export default function Home() {
         obstacles: obstacles.map((obstacle) => {
           return {
             id: obstacle.id,
-            x: obstacle.x * ALGO_GRID_BLOCK_SIZE_MULTIPLIER,
-            y: obstacle.y * ALGO_GRID_BLOCK_SIZE_MULTIPLIER,
+            // x: obstacle.x * ALGO_GRID_BLOCK_SIZE_MULTIPLIER,
+            // y: obstacle.y * ALGO_GRID_BLOCK_SIZE_MULTIPLIER,
+            x: obstacle.x,
+            y: obstacle.y,
             d: obstacle.d,
           };
         }),
