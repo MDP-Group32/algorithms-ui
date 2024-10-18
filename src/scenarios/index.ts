@@ -1,4 +1,4 @@
-import { collisionCourseAObstacles, collisionCourseBObstacles, collisionCourseCObstacles, cornersObstacles, customObstacles, fiveObstacles, mockCourseObstacles, sevenObstacles, twoObstacles, uTurnObstacles, vCourseObstacles } from './obstacles';
+import { collisionCourseAObstacles, collisionCourseBObstacles, collisionCourseCObstacles, cornersObstacles, customObstacles, eightObstacles, fiveObstacles, mockCourseObstacles, sevenObstacles, twoObstacles, uTurnObstacles, vCourseObstacles } from './obstacles';
 
 export enum ScenarioEnum {
   U_TURN = "U-Turn",
@@ -11,6 +11,7 @@ export enum ScenarioEnum {
   TWO_OBSTACLES = "Two Obstacles",
   FIVE_OBSTACLES = "5 Obstacles",
   SEVEN_OBSTACLES = "7 Obstacles",
+  EIGHT_OBSTACLES = "8 Obstacles",
   MOCK_OBSTACLE_COURSE = "Mock Obstacle Course",
 }
 
@@ -27,5 +28,6 @@ export const ScenarioToObstaclesMap = {
   [ScenarioEnum.TWO_OBSTACLES]: twoObstacles,
   [ScenarioEnum.SEVEN_OBSTACLES]: sevenObstacles,
   [ScenarioEnum.FIVE_OBSTACLES]: fiveObstacles,
+  [ScenarioEnum.EIGHT_OBSTACLES]: eightObstacles,
   [ScenarioEnum.MOCK_OBSTACLE_COURSE]: mockCourseObstacles,
 };
